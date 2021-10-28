@@ -2,16 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
+    public GameObject DialogueBox;
+    public GameObject selection;
     private int index;
     // Start is called before the first frame update
     void Start()
     {
+        if(selection.activeSelf){
+            selection.SetActive(false);
+        }
         textComponent.text = string.Empty;
         startDialogue();
     }
@@ -41,13 +47,19 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    void NextLine(){
-        if(index < lines.Length-1){
+    public void NextLine(){
+        if(index == 2){
+            index++;
+            DialogueBox.SetActive(false);
+            selection.SetActive(true);
+        } else if(index < lines.Length-1){
+            Debug.Log("index: "+index);
             index++;
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
         } else {
-            gameObject.SetActive(false);
+            DialogueBox.SetActive(false);
+            //selection.SetActive(true);
         }
     }
 }
