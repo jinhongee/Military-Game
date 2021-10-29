@@ -24,4 +24,5 @@ public class Dialogue : MonoBehaviour
     {
         dialogueFund.InitiateProcess(textComponent, lines, textSpeed, DialogueBox, selection, black, scene);
     }
+    
 }
