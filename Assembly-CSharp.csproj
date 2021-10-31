@@ -36,10 +36,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Blink.cs" />
-     <Compile Include="Assets\FadeAway.cs" />
-     <Compile Include="Assets\VideoHandler.cs" />
-     <Compile Include="Assets\Dialogue.cs" />
+     <Compile Include="Assets\Scripts\SelectFirst.cs" />
+     <Compile Include="Assets\Scripts\Blink.cs" />
+     <Compile Include="Assets\Scripts\Vid1.cs" />
+     <Compile Include="Assets\Scripts\Dialogue.cs" />
+     <Compile Include="Assets\Scripts\FadeAway.cs" />
+     <Compile Include="Assets\Scripts\FadeToBlack.cs" />
+     <Compile Include="Assets\Scripts\VideoHandler.cs" />
+     <Compile Include="Assets\Scripts\SetVideo.cs" />
+     <Compile Include="Assets\Scripts\DialogueFund.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
