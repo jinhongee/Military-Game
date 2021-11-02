@@ -20,6 +20,7 @@ public class Blink : MonoBehaviour
             yield return new WaitForSeconds(.5f);
             flashingText.text = "시작하려면 화면을 터치하세요";
             yield return new WaitForSeconds(.5f);
+            //This is to check updates
         }
     }
 }
