@@ -40,7 +40,9 @@ public class DialogueFund : MonoBehaviour
     void Update()
     {
         if(Input.GetMouseButtonDown(0)){
-            if(textComponent.text == lines[index]){
+            if(extra.activeSelf || selection.activeSelf){
+                StartCoroutine(Wait());
+            } else if(textComponent.text == lines[index]){
                 NextLine();
             } else {
                 StopAllCoroutines();
@@ -54,6 +56,10 @@ public class DialogueFund : MonoBehaviour
         StartCoroutine(TypeLine());
     }
 
+    IEnumerator Wait(){
+        yield return new WaitForSeconds(5f);
+    }
+
     IEnumerator TypeLine(){
         foreach(char c in lines[index].ToCharArray()){
             textComponent.text += c;
@@ -61,11 +67,16 @@ public class DialogueFund : MonoBehaviour
         }
     }
 
+
     public void NextLine(){
         if(index == 2){
             index++;
             DialogueBox.SetActive(false);
             extra.SetActive(true);
+        } else if(index == 5){
+            index++;
+            DialogueBox.SetActive(false);
+            selection.SetActive(true);
         } else if(index < lines.Length-1){
             Debug.Log("index: "+index);
             index++;
