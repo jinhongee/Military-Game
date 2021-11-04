@@ -16,6 +16,7 @@ public class DialogueFund : MonoBehaviour
     private int index;
     public FadeToBlack fadeToBlack;
     public GameObject extra;
+    public GameObject extra2;
     // Start is called before the first frame update
     public void InitiateProcess(TextMeshProUGUI tc, string[] ln, float ts, GameObject db, GameObject sl, GameObject bl, string sn)
     {
@@ -27,10 +28,11 @@ public class DialogueFund : MonoBehaviour
         black = bl;
         scene = sn;
 
-        if(selection.activeSelf || black.activeSelf || extra.activeSelf){
+        if(selection.activeSelf || black.activeSelf || extra.activeSelf || extra2.activeSelf){
             selection.SetActive(false);
             black.SetActive(false);
             extra.SetActive(false);
+            extra2.SetActive(false);
         }
         textComponent.text = string.Empty;
         startDialogue();

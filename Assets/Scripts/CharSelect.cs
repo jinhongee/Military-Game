@@ -12,7 +12,7 @@ public class CharSelect : MonoBehaviour
     public static Image mainChar;
     public Dialogue dl;
     public DialogueFund dlf; 
-    
+    public decision alert;
 
     public void click1(){
 
@@ -58,10 +58,7 @@ public class CharSelect : MonoBehaviour
     }
 
     public void decide(){
-        dl.DialogueBox.SetActive(true);
-        dlf.extra.SetActive(false);
-        
-        dlf.NextLine();
+        alert.ready("한번 캐릭터를 결정한 후에는 다시 변경할 수 없습니다\n\n결정하시겠습니까?");
     }
 
 }
