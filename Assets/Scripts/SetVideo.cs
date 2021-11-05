@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class SetVideo : MonoBehaviour
 {
 
+    public GameObject dialogue;
     private RawImage mScreen = null;
     private VideoPlayer mVideoPlayer = null;
     private GameObject front;
@@ -57,9 +58,9 @@ public class SetVideo : MonoBehaviour
         }
 
         if(actObj != null){
-            Debug.Log("hi");
             yield return new WaitForSeconds(5f);
             actObj.enabled = true;
+            dialogue.SetActive(true);
         }
 
 

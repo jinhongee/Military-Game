@@ -21,6 +21,6 @@ public class SelectFirst : MonoBehaviour
 
     public void path3(){
         route = 3;
-        alert.ready("폐급 병사] 선택지를 고르셨습니다.\n이 결정은 앞으로의 군생활을 결정지으니 신중히 선택해주십시오\n결정하겠습니까?");
+        alert.ready("[폐급 병사] 선택지를 고르셨습니다.\n이 결정은 앞으로의 군생활을 결정지으니 신중히 선택해주십시오\n결정하겠습니까?");
     }
 }
