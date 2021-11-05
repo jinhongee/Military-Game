@@ -51,7 +51,8 @@ public class SetVideo : MonoBehaviour
         
         Debug.Log("video start");
         // VideoPlayer의 출력 texture를 RawImage의 texture로 설정한다
-        mScreen.texture = mVideoPlayer.texture;
+        yield return mScreen.texture = mVideoPlayer.texture;
+        
 
         if(!nextScene.Equals("")){
             Invoke("loadNext", 5f);
