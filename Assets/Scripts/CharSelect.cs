@@ -9,6 +9,7 @@ public class CharSelect : MonoBehaviour
     public GameObject soldier1;
     public GameObject soldier2;
     public GameObject soldier3;
+    public GameObject DialogueImg;
     public static Image mainChar;
     public Dialogue dl;
     public DialogueFund dlf; 
@@ -25,7 +26,7 @@ public class CharSelect : MonoBehaviour
         objColor = new Color(255, 255, 255, 1);
         soldier1.GetComponent<Image>().color = objColor;
 
-        mainChar = soldier1.GetComponent<Image>();
+        mainChar = soldier1.GetComponent<Image>();        
     }
 
     public void click2(){
@@ -58,6 +59,7 @@ public class CharSelect : MonoBehaviour
     }
 
     public void decide(){
+        DialogueImg.GetComponent<Image>().sprite = mainChar.sprite;
         alert.ready("한번 캐릭터를 결정한 후에는 다시 변경할 수 없습니다\n\n결정하시겠습니까?");
     }
 

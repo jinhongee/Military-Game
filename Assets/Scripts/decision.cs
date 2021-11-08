@@ -11,6 +11,7 @@ public class decision : MonoBehaviour
     public GameObject select;
     public GameObject back;
     public GameObject selection;
+    public GameObject DialogueImg;
     private string message;
     // Start is called before the first frame update
     public void ready(string message){
@@ -25,6 +26,8 @@ public class decision : MonoBehaviour
         alert.SetActive(false);
         selection.SetActive(false);
         
+        DialogueImg.SetActive(true);
+
         dlf.NextLine();
     }
 
